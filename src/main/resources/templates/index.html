@@ -10,7 +10,7 @@
 	<div>
 		<header>
 			<h1>header</h1>
-			<div data-th-replace="~{fragments/header::navabar}">
+			<div data-th-replace="~{fragments/header::navbar}">
 			</div>
 		</header>
 		<main>
@@ -23,7 +23,7 @@
 		<footer>
 		<h1>footer</h1>
 		</footer>
-		<script type="text/javascript"></script>
+		<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
 	</div>
 </body>
 </html>
