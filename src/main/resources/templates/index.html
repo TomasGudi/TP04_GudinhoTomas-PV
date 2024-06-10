@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<title>TP4-PV</title>	
+	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<div>
 		<header>
-			<h1>header</h1>
 			<div data-th-replace="~{fragments/header::navbar}">
 			</div>
 		</header>
@@ -19,11 +19,9 @@
 			<h1>aside</h1>
 		</aside>
 		</main>
-
-		<footer>
-		<h1>footer</h1>
 		
-		</footer>
+		<footer data-th-replace="layouts/footer :: footer"></footer>
+		
 		<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
 	</div>
 </body>
