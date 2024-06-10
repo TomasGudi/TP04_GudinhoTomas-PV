@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	
+	<header>
+	<div data-th-replace="~{fragments/header::navbar}"></div>
+	</header>
+
+	<div class="container">
+        <h2>Formulario de Materia</h2>
+        <form th:action="@{/guardarMateria}" th:object="${nuevaMateria}" method="post">
+            <div class="form-group">
+                <label for="codigo">Código</label>
+                <input type="text" class="form-control" id="codigo" th:field="*{codigo}" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" th:field="*{nombre}" required>
+            </div>
+            <div class="form-group">
+                <label for="curso">Curso</label>
+                <input type="text" class="form-control" id="curso" th:field="*{curso}" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidadHoras">Cantidad de Horas</label>
+                <input type="number" class="form-control" id="cantidadHoras" th:field="*{cantidadHoras}" required>
+            </div>
+            <div class="form-group">
+                <label for="modalidad">Modalidad</label>
+                <select class="form-control" id="modalidad" th:field="*{modalidad}">
+                    <option value="virtual">Virtual</option>
+                    <option value="presencial">Presencial</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="docente">Docente</label>
+                <input type="text" class="form-control" id="docente" th:field="*{docente.nombre}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>	
+		
+	<footer data-th-replace="layouts/footer :: footer"></footer>
+		
+	<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
