@@ -8,21 +8,74 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div>
-		<header>
-			<div data-th-replace="~{fragments/header::navbar}">
-			</div>
-		</header>
-		<main>
-
-		<aside>
-			<h1>aside</h1>
-		</aside>
-		</main>
+	
+	<header>
+	<div data-th-replace="~{fragments/header::navbar}"></div>
+	</header>
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Facultad UNJ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Carreras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Noticias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+	<div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-3 bg-light">
+                <h4>Menú</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Biblioteca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calendario académico</a>
+                    </li>
+                </ul>
+            </aside>
+            
+            <main class="col-md-9">
+                <section>
+                    <h2>Bienvenidos a la Facultad</h2>
+                    <p>La Facultad dependiente de la Universidad Nacional de Jujuy ofrece una amplia variedad de carreras y programas académicos. Nuestra misión es formar profesionales competentes y comprometidos con la sociedad.</p>
+                </section>
+                
+                <section>
+                    <h3>Noticias Recientes</h3>
+                    <article>
+                        <h4>Noticia 1</h4>
+                        <p>Descripción breve de la noticia 1.</p>
+                    </article>
+                    <article>
+                        <h4>Noticia 2</h4>
+                        <p>Descripción breve de la noticia 2.</p>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
 		
-		<footer data-th-replace="layouts/footer :: footer"></footer>
+	<footer data-th-replace="~{fragments/footer::footer}"></footer>
 		
-		<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
-	</div>
+	<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>

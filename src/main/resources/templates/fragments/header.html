@@ -3,18 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>header</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	 <nav class="navbar" data-th-Fragment="navbar">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-    </div>
+    <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/images/logo.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Mas educacion es mas democracia
+    </a>
+  </div>
+</nav>
   </nav>
-        
+  
+    <script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
 </body>
 </html>
