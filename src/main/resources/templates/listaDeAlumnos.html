@@ -25,7 +25,6 @@
                     <th>Teléfono</th>
                     <th>Fecha de Nacimiento</th>
                     <th>Domicilio</th>
-                    <th>LU</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -38,7 +37,6 @@
                     <td th:text="${alumno.telefono}">Teléfono</td>
                     <td th:text="${alumno.fechaNacimiento}">Fecha de Nacimiento</td>
                     <td th:text="${alumno.domicilio}">Domicilio</td>
-                    <td th:text="${alumno.lu}">LU</td>
                     <td>
                         <a th:href="@{/modificarAlumno/{dni}(dni=${alumno.dni})}" class="btn btn-warning">Modificar</a>
                         <a th:href="@{/borrarAlumno/{dni}(dni=${alumno.dni})}" class="btn btn-danger">Eliminar</a>
