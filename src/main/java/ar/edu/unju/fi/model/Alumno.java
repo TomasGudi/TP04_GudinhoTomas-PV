@@ -13,9 +13,8 @@ public class Alumno {
     private String telefono;
     private LocalDate fechaNacimiento;
     private String domicilio;
-    private String LU;
-	
-    public String getDni() {
+    
+	public String getDni() {
 		return dni;
 	}
 	public void setDni(String dni) {
@@ -57,13 +56,6 @@ public class Alumno {
 	public void setDomicilio(String domicilio) {
 		this.domicilio = domicilio;
 	}
-	public String getLU() {
-		return LU;
-	}
-	public void setLU(String lU) {
-		LU = lU;
-	}
-
     
 }
 

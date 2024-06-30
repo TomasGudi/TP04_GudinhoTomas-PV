@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class Carrera {
     private String codigo;
     private String nombre;
-    private int cantidadAnios;
+    private int cantAnios;
     private boolean estado;
 	
     public String getCodigo() {
@@ -21,11 +21,11 @@ public class Carrera {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getCantidadAnios() {
-		return cantidadAnios;
+	public int getCantAnios() {
+		return cantAnios;
 	}
-	public void setCantidadAnios(int cantidadAnios) {
-		this.cantidadAnios = cantidadAnios;
+	public void setCantAnios(int cantAnios) {
+		this.cantAnios = cantAnios;
 	}
 	public boolean getEstado() {
 		return estado;
